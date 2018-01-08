@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mail post test</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<section id="contact" class="contact">
+	<div class="container">
+		<div class="section-title">
+			<h2>聯絡我們</h2>
+			<h3>將有專人會詳細回復您
+			</h3>
+		</div>
+		<div class="space"></div>
+		<div class="row">
+			<div class="form-group">
+				<label for="t1">姓名：</label>
+				<input type="name" class="form-control" id="t1" placeholder="例如：Mark">
+			</div>
+			<div class="form-group">
+				<label for="t2">Email</label>
+				<input type="email" class="form-control" id="t2" placeholder="例如：Mark@gmail.com">
+			</div>
+			<div class="form-group">
+				<label for="t3">連絡電話</label>
+				<input type="phone" class="form-control" id="t3" placeholder="例如：0987654321">
+			</div>
+			<div class="form-group">
+			  <label for="t4">訊息</label>
+			  <textarea class="form-control" rows="5" id="t4" placeholder="例如：今天天氣真好"></textarea>
+			</div>
+			
+			<button class="btn-light btn-lg pull-right hvr-bounce-to-right" type="submit" id="ok">送出</button>
+			
+		</div>
+	</div>
+</section>
+
+<script src="js/mail_post.js"></script>
+</body>
+</html>

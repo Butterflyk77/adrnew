@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>管理端登入</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<style>
+/*
+ * Specific styles of signin component
+ */
+/*
+ * General styles
+ */
+body, html {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
+}
+
+.card-container.card {
+    max-width: 350px;
+    padding: 40px 40px;
+}
+
+.btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.card2{
+    margin-top: 15%;
+	text-align:center;
+}
+
+/*
+ * Card component
+ */
+.card {
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 10%;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-card {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/*
+ * Form styles
+ */
+.profile-name-card {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    min-height: 1em;
+}
+
+.reauth-email {
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin #inputEmail,
+.form-signin #inputPassword {
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+}
+
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+.btn.btn-signin {
+    /*background-color: #4d90fe; */
+    background-color: rgb(104, 145, 162);
+    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+.btn.btn-signin:hover,
+.btn.btn-signin:active,
+.btn.btn-signin:focus {
+    background-color: rgb(12, 97, 33);
+}
+
+.forgot-password {
+    color: rgb(104, 145, 162);
+}
+
+.forgot-password:hover,
+.forgot-password:active,
+.forgot-password:focus{
+    color: rgb(12, 97, 33);
+}
+h2{
+	text-align:center;
+}
+</style>
+
+<body>
+
+<!--
+    you can substitue the span of reauth email for a input with the email and
+    include the remember me checkbox
+    -->
+    <div class="container">
+        <div id="panellogin" class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <h2><strong>中醫後端系統</strong></h2>
+			<img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <div class="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="text" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <input type="password" id="inputPassword" onkeypress="enter(event)" class="form-control" placeholder="Password" required>
+                <!--
+				<div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                
+				</div>
+				-->
+                <button id="signin" class="btn btn-lg btn-primary btn-block btn-signin">登入</button>
+            </div><!-- /form -->
+			<!--
+            <a href="#" class="forgot-password">
+                Forgot the password?
+            </a>
+			-->
+        </div><!-- /card-container -->
+		<div class="row card2" id="panelmag">
+			<div class="col-xs-6 col-md-4">
+				<a href="news_mag.html">
+				<div class="well">
+					<i class="fa fa-newspaper-o fa-5x"></i>
+					<h4><strong>最新消息管理</strong></h4>
+				</div>
+				</a>
+			</div>
+			<!-- <div class="col-xs-6 col-md-4"> 
+				<a href="pic.html">
+				<div class="well">
+					<i class="fa fa-picture-o fa-5x"></i>
+					<h4><strong>圖庫系統</strong></h4>
+				</div>
+				</a>
+			</div>-->
+			<div class="col-xs-6 col-md-4">
+				<a href="mail_mag.html">
+				<div class="well">
+					<i class="fa fa-comments fa-5x"></i>
+					<h4><strong>留言資訊</strong></h4>
+				</div>
+				</a>
+			</div>
+			<div class="col-xs-6 col-md-4">
+				<a href="qa_mag.html">
+				<div class="well">
+					<i class="fa fa-life-ring fa-5x"></i>
+					<h4><strong>問答管理</strong></h4>
+				</div>
+				</a>
+			</div>
+			<div class="col-xs-6 col-md-4">
+				<a data-toggle="modal" data-target="#myModal">
+				<div class="well">
+					<i class="fa fa-cogs fa-5x"></i>
+					<h4><strong>修改密碼</strong></h4>
+				</div>
+				</a>
+			</div>
+			<div class="col-xs-6 col-md-4">
+				<a onclick="logout()">
+				<div class="well">
+					<i class="fa fa-power-off fa-5x"></i>
+					<h4><strong>登出系統</strong></h4>
+				</div>
+				</a>
+			</div>
+
+		</div>
+    </div><!-- /container -->
+	
+	<!-- Modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">修改密碼</h4>
+		  </div>
+		  <div class="modal-body">
+			<div class="form-group">
+			  <label for="pwd">輸入密碼:</label>
+			  <input type="password" class="form-control" id="pwd1">
+			</div>
+			<div class="form-group">
+			  <label for="pwd">確認密碼:</label>
+			  <input type="password" class="form-control" id="pwd2">
+			</div>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-primary" id="chgacc">修改</button>
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		  </div>
+		</div>
+
+	  </div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/account.js"></script>
+</body>
+
+</html>

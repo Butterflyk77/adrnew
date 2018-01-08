@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>中藥草不良反應教育網</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+</head>
+<style>
+#t1{
+    background-color: rgba(255,255,255,.15);
+}
+.container-fluid {
+    padding-left: 5px;
+}
+</style>
+<body id="myPage">
+<font face="Microsoft JhengHei">
+<nav class="navbar navbar-inverse navbar-fixed-top visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" id="nav_btn" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">中藥草不良反應教育網</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+		<li><a href="index.html">通報首頁</a></li>
+		<li><a href="cnews.html">最新消息</a></li>
+		<li><a href="about.html">中心介紹</a></li>
+		<li><a href="https://adr.fda.gov.tw/Manager/WebLogin.aspx" target="_block">不良通報</a></li>
+		<li><a href="wiki.html">中藥百科</a></li>
+		<li><a href="link.html">相關連結</a></li>
+		<li><a href="qa.html">問答專區</a></li>
+		<li><a href="connect.html">聯絡我們</a></li>
+		<li>
+			<a href="#" data-toggle="modal" id="nav_mod" data-target="#Modal">
+			<br>
+			<img width="10%" src="img/icon/fb.png">
+			<img width="10%" src="img/icon/line.png">
+			<img width="10%" src="img/icon/youtube.png">
+			<img width="10%" src="img/icon/gmail.png">
+			<br>
+			<br>
+			<p>瀏覽人次:123456</p>
+			</a>
+		</li>
+      </ul>
+	  <!--
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+	  -->
+    </div>
+  </div>
+</nav>
+
+<div id="div1"></div>
+
+<div class="container-fluid b-1 previewb">  
+	<br>
+	<br>
+	<br>
+	<div class="form-group textl">
+		<a id="backu" class="btn btn-success btn-lg">↑</a><br>
+		<a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#Modal_prod_m" onclick="chg_pic(1)">選<br>擇<br>背<br>景</a><br>
+		<a id="backd" class="btn btn-success btn-lg">↓</a>
+	</div>
+	<div class="row hh">
+		
+		<strong>
+		<div class="col-sm-6">
+			<div class="form-group">
+				<a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#Modal_prod_m" onclick="chg_pic(2)">選擇LOGO</a>
+			</div>
+			<img class="preview" src="img/dacnlogo.png" width="100%">
+		</div>
+		
+		<div class="col-sm-6">
+			<div class="form-group">
+			  <label for="t1">企業標語:</label>
+			  <textarea class="form-control" rows="5" id="t1">選擇帶心
+打造你理想的網路空間
+ 由你來決定功能。
+
+帶心，為企業帶來創心</textarea>
+			</div>
+		</div>
+		</strong>
+	</div>
+</div>
+<br>
+
+<div class="container-fluid">
+	<div class="row">
+		<strong>
+			<div class="col-sm-3 hidden-xs">
+				<div class="list-group">
+				  <a class="list-group-item" href="index.html">通報首頁</a>
+				  <a class="list-group-item" href="cnews.html">最新消息</a>
+				  <a class="list-group-item active" href="about.html">中心介紹</a>
+				  <a class="list-group-item" href="https://adr.fda.gov.tw/Manager/WebLogin.aspx" target="_block">不良通報</a>
+				  <a class="list-group-item" href="wiki.html">中藥百科</a>
+				  <a class="list-group-item" href="link.html">相關連結</a>
+				  <a class="list-group-item" href="qa.html">問答專區</a>
+				  <a class="list-group-item" href="connect.html">聯絡我們</a>
+				  <a href="#" class="list-group-item" data-toggle="modal" data-target="#Modal">
+					<br>
+					<img width="20%" src="img/icon/fb.png">
+					<img width="20%" src="img/icon/line.png">
+					<img width="20%" src="img/icon/youtube.png">
+					<img width="20%" src="img/icon/gmail.png">
+					<br>
+					<br>
+					<p>瀏覽人次:123456</p>
+				  </a>
+				</div>
+			</div>
+			<div class="col-sm-9 textl">
+			<h3 class="textc">中心介紹<small></small></h3>
+			</div>
+		</strong>
+	</div>
+</div>
+
+<br>
+<br>
+<br>
+<a id="chg" class="btn btn-primary btn-block">更新</a>
+<br>
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <h2><a href="https://www.dacn.com.tw" data-toggle="tooltip" title="DACN">DACN</a></h2> 
+</footer>
+
+<!-- Modal_m -->
+<div class="modal modal2 fade" id="Modal_prod_m" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">圖庫(<a href="pic.html" target="_blank">上傳系統</a>)</h4>
+      </div>
+      <div class="modal-body">
+			<div class="" id='pic_demo'>
+				<h1>無照片，或發生錯誤，請聯絡工程師</h1>
+			</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="sel_pic" class="btn btn-danger" data-dismiss="modal">選擇</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</font>
+<script src="js/selpic.js"></script>
+<script>
+
+$("#sel_pic").click(function (){
+	switch (pic_chg) {
+		case 1://新增的照片
+			$('.previewb').css('background-image', 'url('+sel_pic_src+')');
+			$('.previewb').css('background-size', 'cover');
+			break;
+		case 2://新增html的照片
+			$('.preview').attr('src', sel_pic_src);
+			break;
+		
+	}
+});
+var id;
+get_json();//取得列表
+function get_json(){
+	text_json_list = '<li class="list-group-item">無資料<span class="badge">0</span></li>';
+$.ajax({
+	type: 'POST',
+	url: "server/webmag.php",
+	dataType: "json",
+	data:{
+		mod_tab:'show_list'
+	},
+	success: function(status){
+		prod_json=status;
+		console.log(JSON.stringify(status));
+		for(i=0;i<=status.length-1;i++){
+		$(".previewb").css('background-image',status[i].background);		//background
+		$(".previewb").css('background-position-y',status[i].backgroundy);		//backgroundy
+		$(".preview").attr('src',status[i].logo);             //logo
+		$("#t1").val(status[i].logotext);                        //logotext
+		id=status[i].id;
+		}
+		
+	}
+});
+}
+
+$("#add").click(function (){
+	var t1,t2,t3;
+	t1=$(".previewb").css('background-image');//background
+	t2=$(".preview").attr('src');             //logo
+	t3=$("#t1").val();                        //logotext
+	//alert('t1='+t1+"\nt2="+t2+"\nt3="+t3+"\n");
+	$.ajax({
+		type: 'POST',
+		url: "server/webmag.php",
+		data:{
+			mod_tab:'add',
+			t1:t1,
+			t2:t2,
+			t3:t3
+		},
+		success: function(status){
+			console.log(JSON.stringify(status));
+			if(status=="New record created successfully"){
+				alert('新增成功!!');
+				location.reload();
+			}
+		}
+	});
+});
+
+$("#chg").click(function (){
+	var t1,t2,t3;
+	t1=$(".previewb").css('background-image');//background
+	t11=$(".previewb").css('background-position-y');//background
+	t2=$(".preview").attr('src');             //logo
+	t3=$("#t1").val();                        //logotext
+	//alert('t1='+t1+"\nt11="+t11+"\nt2="+t2+"\nt3="+t3+"\nid="+id);
+	
+	$.ajax({
+		type: 'POST',
+		url: "server/webmag.php",
+		data:{
+			mod_tab:'chg',
+			t1:t1,
+			t11:t11,
+			t2:t2,
+			t3:t3,
+			id:id
+		},
+		success: function(status){
+			console.log(JSON.stringify(status));
+			if(status=="Record updated successfully"){
+				alert('修改成功!!');
+				//location.reload();
+			}
+		}
+	});
+});
+
+$("#backu").click(function (){
+	//$(".previewb").css('background-position','10% 50%');
+	var a = $(".previewb").css('background-position-y');
+	a = a.replace("%", "");
+	a=Number(a);
+	if(a == 100){
+	
+	}else{
+		a++;
+	}
+	$(".previewb").css('background-position-y',a+"%");
+});
+
+$("#backd").click(function (){
+	//$(".previewb").css('background-position','10% 50%');
+	var a = $(".previewb").css('background-position-y');
+	a = a.replace("%", "");
+	a=Number(a);
+	if(a == 0){
+	
+	}else{
+		a--;
+	}
+	$(".previewb").css('background-position-y',a+"%");
+});
+</script>
+</body>
+</html>

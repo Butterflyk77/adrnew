@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	    <title>中草藥不良反應通報中心</title>
+
+	<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="css/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/hover.css">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+
+	<!-- Custom Fonts -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<style>
+
+</style>
+
+<body id="page-top" class="index">
+	<!-- <Navigat></Navigat>ion -->
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img class="img-responsive" src="img/logo.png" alt="">中草藥不良反應通報中心</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden active">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="about.html">中心介紹</a>
+                    </li>
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">我要通報<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://adr.fda.gov.tw/Manager/WebLogin.aspx">中草藥不良反應通報</a></li>
+                            <li><a href="https://adr.fda.gov.tw/Manager/WebLogin.aspx">中草藥臨床試驗不良反應通報</a></li>
+                            <li><a href="form.html">中草藥不良品通報</a></li>
+                            <li><a href="pdf/tutorial.pdf">中草藥不良反應通報教學</a></li>
+                            <li><a href="handmade.html">中草藥不良反應紙本通報表</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="page-scroll">
+                        <a href="information.html">最新消息</a>
+                    </li>
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">中草藥不良反應<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="nogoodnews.html">中草藥不良反應新聞回應</a></li>
+                            <li><a href="goodnews.html">中草藥新知</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">中草藥不良品<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="taxonomynews.html">中草藥不良品新聞</a></li>
+                            <li><a href="taxonomy.html">中草藥不良品真偽藥差別</a></li>
+                        </ul>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="story.html">網路小故事</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="Q&amp;A.html">網路問答</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="Link.html">相關連結</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="contactus.html">聯絡我們</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+	<!-- Portfolio Grid Section -->
+	<div class="container blog-content">
+		<div class="jumbotron">
+			<h1>問答專區</h1>
+		</div>
+		<div class="row">
+			<div class="col-sm-8 blog-main">
+				<div class="row">
+					<div class="col-md-12">
+						<section class="blog-post">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="blog-post-content">
+										<h2 class="blog-post-title"> Note:也可以到連絡我們發問，我們會盡快為你解答</h2>
+										<div id="newdiv"></div>
+										<!-- <div class="panel panel-primary">
+											<div class="panel-heading">
+												<h3 class="panel-title">Q：煎煮中藥該用什麼器具？</h3>
+											</div>
+											<div class="panel-body">
+												<div class="blog-post-content ans">
+													<p>A： ￭水藥是什麼 中藥最常見的劑型「湯劑」，又稱水藥(水煎藥)、飲片、煎劑，其與科學中藥的藥理成分一致，主要差異在於濃度增加、藥效更強，較適於久病、重病、嚴重急病、吞嚥困難或想增加滋補效果時用。由於煎煮方法和使用器具，會直接影響藥效，所以煎煮過程中每一個環節都必須加以注意小心。
+													</p>
+												</div>
+												<div class="blog-post-content ans">
+													<p> ￭煎藥鍋的選擇 煎藥器具應選用穩定及導熱均勻材質，以砂鍋、陶鍋、瓦鍋、瓷鍋、塘瓷為佳，此類鍋具性質較穩定，能保持藥液純淨，且具受熱均勻的優點，故煎出的湯藥品質較佳；忌用鐵鍋，銅鍋，鋁鍋等金屬器具，因為金屬器具易與藥物成分發生化合反應，使藥物變質、變味或產生沉澱物，影響療效和產生副作用，甚至釋出對人體有害的物質。
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-primary">
+											<div class="panel-heading">
+												<h3 class="panel-title">Q：中藥該如何煎煮？</h3>
+											</div>
+											<div class="panel-body">
+												<div class="blog-post-content ans">
+													<p>A：除了少數中藥材(如：鹿角膠、龜板膠、麝香等需特殊處理)無需浸泡，一般藥材因經加工炮製、脫水乾燥，若直接煎煮，有效成份不易溶出，故需先以清水適當地沖洗中藥材清除其表面的污垢，再用清水蓋過藥材，促使藥物變軟，讓藥材的有效成分溶出在藥液中，浸泡的水量、水溫亦須注意，
+
+													</p>
+												</div>
+												<div class="blog-post-content ans">
+													<p> 建議以略高於藥材2~3公分的冷水充份浸潤：花、葉、莖類(如：菊花、桑葉等)的藥材，浸泡約20分鐘；屬於根、種子、果實(如：人參、酸棗仁等)這類的藥材，可浸泡30~60分鐘，若是特殊方劑，則需醫師指示調整時間。切記不可使用熱水浸泡，以免藥材中的蛋白質受熱凝固，影響藥材釋出有效成分，並避免因浸泡太久導致腐壞變質。</p>
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-primary">
+											<div class="panel-heading">
+												<h3 class="panel-title">Q：中藥煎煮的水量與火候？</h3>
+											</div>
+											<div class="panel-body">
+												<div class="blog-post-content ans">
+													<p>A：￭煎藥水量需拿捏 明代李時珍言：「劑多水少，則藥味不出，劑少水多，又煎耗藥力。」故知添加的水量直接影響治療成效，拿捏適當十分重要。一般來說，若不是低吸水性的藥材，頭煎的水量以超過藥材3公分為宜，煎煮時間約需1.5小時；第二煎則因無需顧慮藥材的吸水量，只需剛好蓋過藥材即可，煎煮時間約需1小時。若為龜板、黃耆一類質地堅硬、粘稠的藥材，就須適量增加水量，以耐久煎。
+													</p>
+												</div>
+												<div class="blog-post-content ans">
+													<p>￭煎藥火候有技巧 煎煮過程的火候控制是重點，中醫將煎藥的火侯，分為「武火」(大火)與「文火」(小火)，一般建議選用「先武後文」的方式，意思是說，先用大火急煎，使藥劑迅速煮沸，再改用小火慢煎15~20分鐘左右，使藥湯維持微沸，持續煎煮出藥材有效成分，煎煮過程中記得要加蓋，盡量使有效成分保留在湯汁裡，最後將藥液濾出；濾取藥汁要趁藥液未冷時，用兩層乾淨的紗布過濾會較清澄。
+													</p>
+												</div>
+													<div class="blog-post-content ans">
+
+														<p>但依藥材性質不同，使用的火候也會不同，有些特殊中藥煎藥時間和使用的方法較特別：如麻黃、桂枝、銀花、大黃、檳榔等藥材，多建議用武火急煎，經一到兩次沸騰後服用；若為黨參、黃耆等補益藥材，或是珍珠母、牡蠣等礦物類藥材，以及川貝母、鬱金等根莖類藥材，則需以文火，持續緩煎出藥性。</p>
+														</div>
+														<div class="blog-post-content ans">
+														<p>通常一帖藥可煎兩回(頭煎及尾煎)，並將兩次的煎液均勻混合，遵照中醫師囑咐，分2~3次於一天內服用完畢。建議事先諮詢中醫師或藥師，以免與預期療效有所差距。</p>
+													</div>
+											</div>
+										</div>
+										<div class="panel panel-primary">
+											<div class="panel-heading">
+												<h3 class="panel-title">Q：易造成光敏感或色素沉澱的中藥有哪些﹖</h3>
+											</div>
+											<div class="panel-body">
+												<div class="blog-post-content ans">
+													<p>A：所謂「光敏感」(Photosensitivity)，可分為「光毒性」(phototoxicity)及「光過敏」(photoallergy)兩種。「光毒性」是指接觸含具感光物質的成份後，加上曬到紫外線後，造成皮膚的發炎紅腫，常伴隨劇癢，甚至起水皰，接著留下不同程度的色素沉澱。「光過敏」是指一種過敏反應，第一次接觸通常沒反應，再次接觸及照光後，產生皮膚發炎搔癢的症狀，通常不留下色素沉澱。
+													</p>
+												</div>
+												<div class="blog-post-content ans">
+													<p>常見的感光物質包括Furocoumarin (呋喃香豆素)、Coumarin(香豆素)、Psoralen(補骨脂素)、Tar (焦油)等。含有Furocoumarin的物質：<br> 1. 包括繖形科 (Umbelliferae)的巴西利、芹菜、雷公根、蒔蘿、九層塔、蘿蔔、歐洲防風草、中藥材的白芷、當歸、茴香、(補骨脂、獨活)。<br> 2. 芸香科 (Rutaceae)的橘子、檸檬、佛手柑、柚子、胡椒木。<br> 3. 菊科 (Compositae)的萵苣、野茼蒿、蟛蜞菊、蒲公英、地膽草。</p>
+												</div>
+													<div class="blog-post-content ans">
+													<p>	</p>
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-primary">
+											<div class="panel-heading">
+												<h3 class="panel-title">Q：中藥若含有光敏感成分，對人體有何影響﹖</h3>
+											</div>
+											<div class="panel-body">
+												<div class="blog-post-content ans">
+													<p>A：因為含Furocoumarin物質的量不同，故非每種接觸上述植物照光後都會發生皮膚炎。之前很多的案例報告是擠檸檬汁或用檸檬汁敷臉後，曬到太陽而發病。光毒性的機轉，是因為這些感光物質具有不飽合雙鍵的六碳結構，會吸收紫外線，尤其是UVA。光敏感物質吸收紫外線後，呈現激活狀態，接著參與氧化反應，產生自由基與過氧化物，進而造成細胞損傷。</p>
+												</div>
+												<div class="blog-post-content ans">
+													<p>皮膚病理呈現角質細胞死亡及真皮層黑色素沉積，後者嚴重程度的不同即是臨床上不同程度的色素沉澱。Coumarin是一種重要的香料，常用作定香劑、脫臭劑，配製香水和香料，也用作飲料、食品、香菸、塑料製品、橡膠製品等的增香劑。醫藥上加入藥劑中作為矯味劑。目前經動物實驗，被證實具有小鼠致癌性，因此有些國家因此訂定攝取的安全劑量。由於齧齒動物會將香豆素代謝為"3,4-環氧香豆素"，這種代謝產物可引發內出血因而造成死亡。</p>
+												</div>
+													<div class="blog-post-content ans">
+													<p>但是香豆素在不同物種間的代謝途徑不同，人類則是將香豆素代謝成毒性較低的"7-羥基香豆素"，這種代謝物"may cause liver damage in some sensitive people"，因此香豆素對人類的毒性較低。動物實驗確實發現長期服用香豆素會引發齧齒動物之癌症，不過人體試驗目前則無相關報導，反倒是能抑制某些癌細胞的增殖。
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-primary">
+											<div class="panel-heading">
+												<h3 class="panel-title">Q：中藥若含有光敏感成分，對人體有何影響﹖</h3>
+											</div>
+											<div class="panel-body">
+												<div class="blog-post-content ans">
+													<p>￭馬兜鈴酸是什麼 馬兜鈴酸存在於馬兜鈴科植物中，曾被廣泛運用於中草藥，主要作用在於清肺、活血、止咳、止痛，加上其有利尿的效果，曾被當作減肥藥使用，亦做為婦女產後補身之用。<br>￭馬兜鈴酸為何被禁用 1992年，比利時發生病人服用含中草藥的減肥藥後，引發嚴重的腎衰竭等腎病變，引起醫學界注意。<br>隨後多篇研究，將致病原因指向於中藥材所含的馬兜鈴酸，相關論文與報告指出，馬兜鈴酸對肝腎有毒性，且可致癌，會造成腎功能快速惡化，為造成腎毒性的元兇。</p>
+												</div><br><br>
+													<div class="blog-post-content ans">
+													<p>￭因含馬兜鈴酸而禁用中藥材2003年衛生署亦宣布禁用關木通、廣防己、青木香、天仙藤、馬兜鈴等5種含有馬兜鈴酸的中藥，並註銷含有馬兜鈴酸中藥製劑的50張藥證，包括補肺阿膠散、治嗽散、運功散等。<br>五種因含馬兜鈴酸而禁用中藥材︰<br></p>
+												</div><br>
+												<div class="blog-post-content ans">
+													<p>(1) 關木通：作用為通行水，瀉小腸火。木通有「關木通」與「川木通」兩種，「關木通」含馬兜鈴酸；「川木通」為毛莨科，不含馬兜鈴酸。<br>(2) 廣防己：作用為通行水，瀉下焦血分溼熱。防己有「廣防己」、「粉防己」之別，「廣防己」為馬兜鈴科含馬兜鈴酸；「粉防己」為防己科，不含馬兜鈴酸。<br> (3) 青木香：作用宣行氣。木香有「青木」香與「廣木香」兩種。「青木香」為馬兜鈴科含馬兜鈴酸，「廣木香」屬菊科，不含馬兜鈴酸。<br> (4) 天仙藤：作用活血消腫。中藥有許多活血消腫藥物可選用，天仙藤禁用影響不大。<br> (5) 馬兜鈴：作用瀉肺下氣，臨床用治痰嗽喘促，痔瘡血漏。類似作用亦有其他中藥可選用。<br>
+													</p>
+												</div>
+												<div class="blog-post-content ans"><p></p></div>
+											</div>
+										</div>
+										<div class="panel panel-primary">
+											<div class="panel-heading">
+												<h3 class="panel-title">Q：疏經活血湯含馬兜鈴酸？</h3>
+											</div>
+											<div class="panel-body">
+												<div class="blog-post-content ans">
+													<p>A：網路誤傳疏經活血湯中的威靈仙含馬兜鈴酸，然根據「中華本草」書籍記載：威靈仙屬於毛茛科植物，其成分不含馬兜鈴酸。疏經活血湯中的粉防己如誤用含有馬兜鈴酸的廣防己(Aristolochia fangchi Y. C. Wu ex L. D. Chow et S. M. Hwang)才可能會有問題。含馬兜鈴酸之藥材已禁用超過 10 年，且專家學者及主管機關均隨時針對市場上 GMP 科學中藥製劑進行抽樣檢測，結果顯示均未含馬兜鈴酸成分，</p>
+												</div>
+												<div class="blog-post-content ans">
+													<p>民眾不必過度恐慌。但須注意，雖然歐美各國和台灣已明令禁止使用馬兜鈴酸的藥物，但中國大陸、日本、韓國、印度仍有許多人使用，大陸至少有36種複方藥物添加馬兜鈴酸，故呼籲民眾仍需注意，不要購買與誤用來路不明的中草藥。
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-primary">
+											<div class="panel-heading">
+												<h3 class="panel-title">Q：中藥泡茶，可當茶喝？</h3>
+											</div>
+											<div class="panel-body">
+												<div class="blog-post-content ans">
+													<p>A：中醫養生的觀念興起，中草藥當茶飲蔚為風尚，許多人有將中藥泡茶可當茶水飲用的習慣，其實大多數人都不清楚，「中藥茶」也是藥。在中藥劑型上，「茶劑」和我們熟悉的湯劑類似，指在茶葉中添加食物或藥物，為具療效之特殊飲品，廣義而言，還包括不含茶葉，而是食物添加中草藥製成的飲品。 無論是方便大眾攜帶及飲用製作成的茶包，或是市面販售的涼茶、青草茶飲料，抑或自行於中藥行購買中藥材來泡茶喝，即使藥量和藥性較少量及溫和，亦須切記勿飲用甚多，
+
+													</p>
+													</div><br><br><br><br>
+													<div class="blog-post-content ans">
+													<p>譬如長期泡菊花當茶喝，會覺得肚子發脹，胃口全無，是因苦寒傷胃，引起腹脹腹瀉、食欲減退、神疲乏力等副作用。飲用中藥茶務須掌握「藥性」並「對症下藥」，最好事先諮詢中醫師或藥師，才能確保安全又有效，故長期使用同樣的中藥材泡茶喝，或過量服用，未達養生的目的反倒對身體造成慢性傷害。飲用中藥茶時，最好不要與西藥或相剋食物(如：白糖、雞蛋、酒、羊肉等)搭配服用，以免內含成分交互作用，產生化學反應．導致藥效降低或出現副作用。如發現任何未預期的反應，應立即停止使用並洽詢中醫師或是藥師，並於合格有信譽的中藥行購買藥材。 </p>
+													<p></p>
+												</div>
+												<div class="blog-post-content ans">
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-primary">
+											<div class="panel-heading">
+												<h3 class="panel-title">Q：要選甚麼時間與方法喝中藥茶？</h3>
+											</div>
+											<div class="panel-body">
+												<div class="blog-post-content ans">
+													<p>A：￭藥茶如何泡<br> 中藥茶有沖泡、煎煮、壓榨及蒸餾等不同的製作方法，主要有泡服法、煎服法、調服法三種：
+														<br> (1) 泡服法：多為花類乾燥、切薄片、搗碎、或製成粗末的茶方，或袋泡茶、塊茶。取適量放置茶杯中於杯壺，加入沸水，加蓋燜置15~30分鐘，以味淡為度。</p>
+														</div>
+														<div class="blog-post-content ans">
+															<p> (2) 煎服法：多為複方藥茶，因藥味多或藥味不易泡出，故製成粗末，並煎成藥汁。<br></p><p> (3) 調服法：少數藥方為粉狀，需加入開水調和飲用，如八仙茶。通常見於中藥散劑的服用。<br></p>
+													</div>
+													<div class="blog-post-content ans">
+													<p>￭什麼時候喝中藥茶<br> 飲用中藥茶時間的時間點也很重要，應根據藥材性質、個人體質、疾病徵狀等，適當適量，
+														<br> 一般需趁熱飲用，不宜隔夜或涼飲，為防止放置過久而腐敗變質，尤忌隔數日飲服，夏季更應注意：
+														<br> (1) 發汗解表類的中藥茶(如：三花飲等)，宜溫飲，並一次飲用一定量，不拘時候，淺汗為度，以免虛脫，病除即須停止飲用。<br> (2) 補益類的中藥茶(如：參茶等)宜在飯前服，一般建議於飯前30分鐘左右，有益於食物充分吸收<br><br></p>
+														</div>
+													<div class="blog-post-content ans" style="margin-top:3.2em;">
+														<p> (3) 對胃腸道有刺激性的中藥茶(如：菊花茶等)，宜在飯後10~30分鐘服，使中藥茶和食物混合，充分發揮藥效，且避免對腸胃過度刺激。<br> (4) 安神類的中藥茶(如：甘麥大棗茶等)，宜於晚間飲用，建議在睡前15~30分鐘。<br> (5) 瀉下類的中藥茶，應在早晨空腹狀態下喝，以充分吸收。<br> (6) 防疫抗暑/寒類的中藥茶(如：青草茶等)，需因應季節選用。<br>
+
+													</p>
+												</div>
+								<div class="blog-post-content ans">
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-primary">
+											<div class="panel-heading">
+												<h3 class="panel-title">Q：紅豆跟赤小豆是一樣的嗎？</h3>
+											</div>
+											<div class="panel-body">
+												<div class="blog-post-content ans">
+													<p>A：一般食用的「紅豆」是 Vigna angularis (Willd.) Ohwi & H. Ohashi 的成熟種子，而「赤小豆」則是 Vigna umbellate (Thunb.) Ohwi & H. Ohashi的成熟種子，二者在植物分類學上為不同的物種，但是據台灣中藥典內規範，上述兩種植物皆可為「赤小豆」的正品來源，也就是說二者就藥典上的定義皆可當「赤小豆」使用，然而，在食用相關產品時仍須注意下列幾點：</p>
+													</div>
+											<div class="blog-post-content ans">
+													<p>1.據台灣食藥署(TFDA)可供食品使用原料彙整一覽表中的規範，僅有「紅豆V. angularis」可做食品使用，「赤小豆V. umbellate」不在該一覽表中，且作用較強，故千萬別當一般食品使用。<br> 2.依據藥事法第69條規定「非藥物不得宣稱醫療效能」，故千萬不可過於相信誇大不實的食品廣告。
+													</p>
+													<p></p>
+												</div>
+											</div>
+										</div> -->
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- /.blog-post -->
+					</div>
+				</div>
+
+
+			</div>
+			<!-- /.blog-main -->
+
+         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+
+          <div class="sidebar-module">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+          </div><!-- /.sidebar-module -->
+          <div class="sidebar-module">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h4>類別</h4>
+                <ol class="categories list-unstyled" id="listdiv">
+                  <li>
+                    <a class="label label-light label-primary" href="filter-category.html">分類一</a>
+                    <span class="label label-light label-default pull-right">8</span>
+                  </li>
+                  <li>
+                    <a class="label label-light label-warning" href="filter-category.html">分類二</a>
+                    <span class="label label-light label-default pull-right">5</span>
+                  </li>
+                  <li>
+                    <a class="label label-light label-info" href="filter-category.html">分類三</a>
+                    <span class="label label-light label-default pull-right">9</span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div><!-- /.sidebar-module -->
+
+          <div class="sidebar-module">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h4>時間</h4>
+                <ol class="list-unstyled">
+                  <li><a href="filter-date.html">February 2017</a></li>
+                  <li><a href="filter-date.html">January 2016</a></li>
+                </ol>
+              </div>
+            </div>
+          </div><!-- /.sidebar-module -->
+        </div><!-- /.blog-sidebar -->
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- /.container -->
+	<!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-12">
+                        <h3>中草藥不良反應通報中心
+                        中國醫藥大學 立夫中醫藥展示館</h3>
+                        <div class="col-md-12">
+                            <p class=fl><i class="fa fa-map-marker"></i>40402台中市北區學士路91號</p>
+                        </div>
+                        <div class="col-md-12">
+                            <p class=fl><i class="fa fa-phone"></i>04-22053366#1670</p>
+                        </div>
+                        <div class="col-md-12">
+                            <p class=fl> <i class="fa fa-envelope"></i>tcmadr.mohw@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        Copyright &copy;2017 中草藥不良反應通報中心 All right reserved.
+                    </div>
+                    <div class="col-lg-6">
+                        Design by <a href="https://dacn.com.tw">DACN 帶心整合行銷</a>
+                    </div>
+                </div>
+            </div>
+        </div>    </footer>
+
+	<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+	<div class="scroll-top page-scroll visible-xs visible-sm">
+		<a class="btn btn-primary" href="#page-top">
+			<i class="fa fa-chevron-up"></i>
+		</a>
+	</div>
+
+	<!-- Portfolio Modals -->
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.min.js"></script>
+	<script src="js/cbpAnimatedHeader.js"></script>
+	<!-- Custom Theme JavaScript -->
+	<script src="js/main.js"></script>
+	<script>
+        var chkk, url_str, url_n, dchk;
+        url_str = location.search;
+
+        function keyck() {
+            url_n = url_str.length;
+            chkk = url_str.substring(1, url_n); //去掉 ?
+            chkk = chkk.split("=");
+            dchk = chkk[1];
+            get_json(dchk)
+        }
+        keyck();
+        //get_json();//取得列表
+        function get_json(ifid) {
+            text_json_list = '無資料';
+            $.ajax({
+                type: 'POST',
+                url: "mag/server/qa.php",
+                dataType: "json",
+                data: {
+                    mod_tab: 'show_list'
+                },
+                success: function(status) {
+                    prod_json = status;
+                    console.log(JSON.stringify(status));
+                    var text_json_list = '';
+                    var demo = "";
+                    for (i = 0; i <= status.length - 1; i++) {
+                        if (ifid == status[i].sel || ifid == undefined) {
+                            
+							demo +='<div class="panel panel-primary">                                                    ';
+							demo +='	<div class="panel-heading">                                                      ';
+							demo +='		<h3 class="panel-title">Q：'+status[i].q+'</h3>                       ';
+							demo +='	</div>                                                                           ';
+							demo +='	<div class="panel-body">                                                         ';
+							demo +='		<div class="blog-post-content ans">                                          ';
+							demo +='			<p>A： ￭    '+status[i].a+'    ';
+							demo +='			</p>                                                                     ';
+							demo +='		</div>                                                                       ';
+							demo +='	</div>                                                                           ';
+							demo +='</div>                                                                               ';
+                        }
+                    }
+                    $("#newdiv").html(demo);
+                }
+            });
+        }
+
+        var prod_jsonlist = [];
+        get_jsonlist(); //取得列表
+        function get_jsonlist() {
+            tt = '';
+            $.ajax({
+                type: 'POST',
+                url: "mag/server/newskind.php",
+                dataType: "json",
+                data: {
+                    mod_tab: 'show_list',
+                    kind: 'qa'
+                },
+                success: function(status) {
+                    prod_jsonlist = status;
+                    console.log(JSON.stringify(status));
+                    var text_json_sel = '';
+                var tag_style = ["primary","warning","info","success","default"];
+                    for (i = 0; i <= status.length - 1; i++) {
+                        text_json_sel += '<li>                                                                                ';
+                        text_json_sel += '	<a class="label label-light label-'+tag_style[i]+'" href="Q&A.html?kind=' + status[i].id + '">' + status[i].name + '</a>';
+                        text_json_sel += '	<span class="label label-light label-default pull-right hide">8</span>                ';
+                        text_json_sel += '</li>                                                                               ';
+                    }
+                    $("#listdiv").html(text_json_sel);
+                }
+            });
+        }
+        //listdiv
+    </script>
+</body>
+
+</html>

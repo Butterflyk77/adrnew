@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>中國醫藥管理</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<style>
+    body {
+        font-family: "微軟正黑體";
+    }
+</style>
+
+<body>
+    <div id="htmlnav"></div>
+    <div class="container-fluid" style="margin-top:50px">
+        <h1>管理端<small>類別管理</small></h1>
+        <div class="row" id="show_prod"></div>
+
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">新增</a></li>
+            <li><a data-toggle="tab" href="#menu1">修改/刪除</a></li>
+            <li><a data-toggle="tab" href="#menu2" id="tablechg">chg</a></li>
+            <li><a data-toggle="tab" href="#menu3">類別管理</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <br>
+                <br>
+                <div class="form-group">
+                    <label for="s1">類別:</label>
+                    <select class="form-control" id="s1">
+					<option value="">常見問題</option>
+				  </select>
+                </div>
+                <div class="form-group">
+                    <label for="t1">Q:</label>
+                    <textarea class="form-control" rows="2" id="t1" placeholder="煎煮中藥該用什麼器具？"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="t2">A:</label>
+                    <textarea class="form-control" rows="5" id="editor1" placeholder="A： ￭水藥是什麼 中藥最常見的劑型「湯劑」，又稱水藥(水煎藥)、飲片、煎劑，其與科學中藥的藥理成分一致，主要差異在於濃度增加、藥效更強，較適於久病、重病、嚴重急病、吞嚥困難或想增加滋補效果時用。由於煎煮方法和使用器具，會直接影響藥效，所以煎煮過程中每一個環節都必須加以注意小心。
+
+￭煎藥鍋的選擇 煎藥器具應選用穩定及導熱均勻材質，以砂鍋、陶鍋、瓦鍋、瓷鍋、塘瓷為佳，此類鍋具性質較穩定，能保持藥液純淨，且具受熱均勻的優點，故煎出的湯藥品質較佳；忌用鐵鍋，銅鍋，鋁鍋等金屬器具，因為金屬器具易與藥物成分發生化合反應，使藥物變質、變味或產生沉澱物，影響療效和產生副作用，甚至釋出對人體有害的物質。"></textarea>
+                </div>
+                <br>
+                <button id="add" type="button" class="btn btn-success" data-dismiss="modal">新增</button>
+            </div>
+            <div id="menu1" class="tab-pane fade">
+                <h3>修改</h3>
+                <ul class="list-group" id="list_prod">
+                    <li class="list-group-item">無資料<span class="badge">0</span></li>
+                </ul>
+            </div>
+            <div id="menu2" class="tab-pane fade">
+                <br>
+                <br>
+                <div class="form-group">
+                    <label for="s2">類別:</label>
+                    <select class="form-control" id="s2">
+					<option value="">常見問題</option>
+				  </select>
+                </div>
+                <div class="form-group">
+                    <label for="t1_m">Q:</label>
+                    <textarea class="form-control" rows="2" id="t1_m"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="t2_m">A:</label>
+                    <textarea class="form-control" rows="5" id="editor1_m" placeholder=""></textarea>
+                </div>
+                <br>
+                <button type="button" id="chg" class="btn btn-info btn-lg">修改</button>
+                <br>
+                <br>
+                <br>
+                <button type="button" id="del" class="btn btn-danger btn-lg" data-dismiss="modal">刪除</button>
+            </div>
+            <div id="menu3" class="tab-pane fade">
+                <br>
+                <br>
+                <div class="form-group">
+                    <label for="t1_kind">新類別:</label>
+                    <input type="text" class="form-control" id="t1_kind" placeholder="例如： 政府公告">
+                </div>
+                <button id="add_kind" type="button" class="btn btn-success" data-dismiss="modal">新增</button>
+                <br>
+                <br>
+                <br>
+                <ul class="list-group" id="list_prodk">
+                    <li class="list-group-item">無資料<span class="badge">0</span></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <!-- Modal -->
+    <div class="modal fade" id="Modal_prodk" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">類別修改</h4>
+                </div>
+                <div class="modal-body">
+                    <br>
+                    <div class="form-group">
+                        <label for="t1_kindm">標題:</label>
+                        <input type="text" class="form-control" id="t1_kindm" placeholder="">
+                    </div>
+                    <br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="chgk" class="btn btn-info">修改</button>
+                    <button type="button" id="delk" class="btn btn-danger">刪除</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/qa.js"></script>
+	<script src="js/account.js"></script>
+	<script>
+		$("#htmlnav").load('html-nav.html');
+	</script>
+</body>
+
+</html>

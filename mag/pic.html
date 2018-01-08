@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mark</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<style>
+body{
+	font-family: "微軟正黑體";
+}
+.selcss {
+	padding:1px;
+	position: relative;
+	    right: 15px;
+   border:1px solid #021a40;
+   background-color:#ff0;
+}
+</style>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="index.html">中醫管理端</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="news_mag.html"><i class="fa fa-newspaper-o"></i> 最新消息管理</a></li>
+        <li class="active"><a href="pic.html"><i class="fa fa-picture-o"></i> 圖庫系統</a></li>
+		<li><a href="mail_mag.html"><i class="fa fa-comments"></i> 留言資訊</a></li>
+		<li><a href="qa_mag.html"><i class="fa fa-life-ring"></i> Q&A管理</a></li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+	<div class="container-fluid" style="margin-top:50px">
+		<h1>管理端<small>最新消息</small></h1>
+		<div class="row" id="show_prod"></div>
+		
+		<ul class="nav nav-tabs">
+		  <li class="active"><a data-toggle="tab" href="#home">新增</a></li>
+		  <li><a data-toggle="tab" href="#menu1">Demo</a></li>
+		</ul>
+
+		<div class="tab-content">
+		  <div id="home" class="tab-pane fade in active">
+		  <br>
+			<br>
+			<div class="form-group">
+			  <label for="add_text">圖片備註:</label>
+			  <input type="text" class="form-control" id="add_text" placeholder="例如： coffee">
+			</div>
+			<div class="form-group">
+			  <label for="myFile">圖片:</label>
+			  <input type='file' id="myFile" class="upl" accept='image/*'>
+			</div>
+			<img class="preview" style="max-height: 300px;max-width:100%">
+			<br>
+			<br>
+			<button id="add" type="button" class="btn btn-success" data-dismiss="modal">新增</button>
+		  </div>
+		  
+		  <div id="menu1" class="tab-pane fade">
+		  <h3>Demo</h3>
+				<div class="container" id='pic_demo'>
+					<h1>無圖片，或發生錯誤請聯絡工程師</h1>
+				</div>
+		  </div>
+		</div>
+	</div>
+  <script src="js/pic.js"></script>
+  <script src="js/account.js"></script>
+</body>
+</html>

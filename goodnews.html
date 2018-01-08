@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>中草藥不良反應通報中心</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+<body id="page-top" class="index">
+    <!-- <Navigat></Navigat>ion -->
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img class="img-responsive" src="img/logo.png" alt="">中草藥不良反應通報中心</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden active">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="about.html">中心介紹</a>
+                    </li>
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">我要通報<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://adr.fda.gov.tw/Manager/WebLogin.aspx">中草藥不良反應通報</a></li>
+                            <li><a href="https://adr.fda.gov.tw/Manager/WebLogin.aspx">中草藥臨床試驗不良反應通報</a></li>
+                            <li><a href="form.html">中草藥不良品通報</a></li>
+                            <li><a href="pdf/tutorial.pdf">中草藥不良反應通報教學</a></li>
+                            <li><a href="handmade.html">中草藥不良反應紙本通報表</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="page-scroll">
+                        <a href="information.html">最新消息</a>
+                    </li>
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">中草藥不良反應<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="nogoodnews.html">中草藥不良反應新聞回應</a></li>
+                            <li><a href="goodnews.html">中草藥新知</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">中草藥不良品<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="taxonomynews.html">中草藥不良品新聞</a></li>
+                            <li><a href="taxonomy.html">中草藥不良品真偽藥差別</a></li>
+                        </ul>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="story.html">網路小故事</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="Q&amp;A.html">網路問答</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="Link.html">相關連結</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="contactus.html">聯絡我們</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- Portfolio Grid Section -->
+   <div class="container blog-content">
+  	<div class="jumbotron">
+	    <h1>中草藥新知</h1>      
+  	</div>
+       <div class="row">
+            <div class="col-sm-8 blog-main">
+                <div class="row flex-row" id="newdiv">
+
+                </div>
+
+                <nav class="hide">
+                    <ul class="pager">
+                        <li><a class="withripple" href="#">Previous</a></li>
+                        <li><a class="withripple" href="#">Next</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+            <!-- /.blog-main -->
+
+            <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+
+                <div class="sidebar-module">
+                    <div class="input-group stylish-input-group">
+                        <input type="text" id='searcht1' class="form-control" onkeypress="enter(event)" placeholder="搜尋關鍵字 例如:枸杞、中藥、膽固醇">
+                        <span class="input-group-addon">
+                        <a id="search">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </a>
+                        </span>
+                    </div>
+                </div>
+                <!-- /.sidebar-module -->
+                <div class="sidebar-module">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h4>類別</h4>
+                            <ol class="categories list-unstyled" id="listdiv">
+                                <li>
+                                    <a class="label label-light label-primary" href="filter-category.html">分類一</a>
+                                    <span class="label label-light label-default pull-right">8</span>
+                                </li>
+                                <li>
+                                    <a class="label label-light label-warning" href="filter-category.html">分類二</a>
+                                    <span class="label label-light label-default pull-right">5</span>
+                                </li>
+                                <li>
+                                    <a class="label label-light label-info" href="filter-category.html">分類三</a>
+                                    <span class="label label-light label-default pull-right">9</span>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.sidebar-module -->
+
+                <div class="sidebar-module hide">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h4>時間</h4>
+                            <ol class="list-unstyled">
+                                <li><a href="filter-date.html">February 2017</a></li>
+                                <li><a href="filter-date.html">January 2016</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.sidebar-module -->
+            </div>
+            <!-- /.blog-sidebar -->
+        </div>
+    </div><!-- /.container -->
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-12">
+                        <h3>中草藥不良反應通報中心
+                        中國醫藥大學 立夫中醫藥展示館</h3>
+                        <div class="col-md-12">
+                            <p class=fl><i class="fa fa-map-marker"></i>40402台中市北區學士路91號</p>
+                        </div>
+                        <div class="col-md-12">
+                            <p class=fl><i class="fa fa-phone"></i>04-22053366#1670</p>
+                        </div>
+                        <div class="col-md-12">
+                            <p class=fl> <i class="fa fa-envelope"></i>tcmadr.mohw@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        Copyright &copy;2017 中草藥不良反應通報中心 All right reserved.
+                    </div>
+                    <div class="col-lg-6">
+                        Design by <a href="https://dacn.com.tw">DACN 帶心整合行銷</a>
+                    </div>
+                </div>
+            </div>
+        </div>    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Portfolio Modals -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.min.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+	<script>
+        var chkk, url_str, url_n, dchk;
+        url_str = location.search;
+
+        function keyck() {
+            url_n = url_str.length;
+            chkk = url_str.substring(1, url_n); //去掉 ?
+            chkk = chkk.split("=");
+            dchk = chkk[1];
+            get_json(dchk)
+        }
+        keyck();
+        //get_json();//取得列表
+        function get_json(ifid) {
+            text_json_list = '<li class="list-group-item">無資料<span class="badge">0</span></li>';
+            $.ajax({
+                type: 'POST',
+                url: "mag/server/newst.php",
+                dataType: "json",
+                data: {
+                    mod_tab: 'show_list',
+                    show: 'n3'
+                },
+                success: function(status) {
+                    prod_json = status;
+                    console.log(JSON.stringify(status));
+                    var text_json_list = '';
+                    var demo = "";
+                var tag_style = ["primary","warning","info","success","default"];
+                    for (i = 0; i <= status.length - 1; i++) {
+                        if (ifid == status[i].kind || ifid == undefined) {
+                            demo += '<div class="col-xs-6 col-sm-6 col-lg-6">													';
+                            demo += '		<div class="panel panel-default thumbnail blog-post">								';
+                            demo +='		  <img class="image-popup-vertical-fit" href="mag/server/'+status[i].pic+'" src="mag/server/'+status[i].pic+'" class="img-responsive" />					';
+                            demo += '		  <div class="panel-body caption">                                 					';
+                            demo += '			<div class="blog-post-meta">                                                    ';
+                            demo += '			  <span class="label label-light label-'+tag_style[i]+'">' + status[i].name + '</span>		';
+                            demo += '			  <p class="blog-post-date pull-right">' + status[i].time + '</p>					';
+                            demo += '			</div>                                                                          ';
+                            demo += '			<div class="blog-post-content">                                                 ';
+                            demo += '			  <a href="goodnewsA.html?id=' + status[i].id + '">                      		';
+                            demo += '				<h2 class="blog-post-title">' + status[i].back + '</h2>							';
+                            demo += '			  </a>                                                                          ';
+                            demo += '			  <p class="flex-text">' + status[i].text.replace(/(?:\\[rn]|[\r\n]+)+/g, "").substring(0, 79) + '</p>';
+                            demo += '			</div>                                                                          ';
+                            demo += '		  </div>                                                                            ';
+                            demo += '			  <a class="btn btn-info" href="goodnewsA.html?id=' + status[i].id + '">看更多</a>';
+                            demo += '		</div>                                                                              ';
+                            demo += '</div>                                                                                      ';
+                        }
+                    }
+                    $("#newdiv").html(demo);
+                    ccimg();
+                }
+            });
+        }
+
+        var prod_jsonlist = [];
+        get_jsonlist(); //取得列表
+        function get_jsonlist() {
+            tt = '';
+            $.ajax({
+                type: 'POST',
+                url: "mag/server/newskind.php",
+                dataType: "json",
+                data: {
+                    mod_tab: 'show_list',
+                    kind: 'n3'
+                },
+                success: function(status) {
+                    prod_jsonlist = status;
+                    console.log(JSON.stringify(status));
+                    var text_json_sel = '';
+                var tag_style = ["primary","warning","info","success","default"];
+                    for (i = 0; i <= status.length - 1; i++) {
+                        text_json_sel += '<li>                                                                                ';
+                        text_json_sel += '	<a class="label label-light label-'+tag_style[i]+'" href="goodnews.html?kind=' + status[i].id + '">' + status[i].name + '</a>';
+                        text_json_sel += '	<span class="label label-light label-default pull-right hide">8</span>                ';
+                        text_json_sel += '</li>                                                                               ';
+                    }
+                    $("#listdiv").html(text_json_sel);
+                }
+            });
+        }
+        //listdiv
+    </script>
+</body>
+
+</html>

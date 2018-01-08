@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>中國醫藥管理</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+body{
+	font-family: "微軟正黑體";
+}
+
+.news_name {
+    padding: 5px 0px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.news_info {
+    padding: 5px 0px;
+    text-align: left;
+    color: #666;
+    font-size: 20px;
+}
+
+.selcss {
+	padding:1px;
+	position: relative;
+	    right: 15px;
+   border:1px solid #021a40;
+   background-color:#ff0;
+}
+
+.news_date {
+    padding: 5px 0px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-align: right;
+}
+</style>
+<body>
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="">MKtool</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="news_mag.html">最新消息管理</a></li>
+		<li class="active"><a href="news_kindmag.html">類別管理</a></li>
+        <li><a href="pic.html">圖庫系統</a></li>
+		<li><a href="mail_mag.html">留言資訊</a></li>
+		<li><a href="qa_mag.html">Q&A管理</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+	<div class="container-fluid" style="margin-top:50px">
+		<h1>管理端<small>類別管理</small></h1>
+		<div class="row" id="show_prod"></div>
+		
+		<ul class="nav nav-tabs">
+		  <li class="active"><a data-toggle="tab" href="#home">新增</a></li>
+		  <li><a data-toggle="tab" href="#menu1">修改/刪除</a></li>
+		</ul>
+
+		<div class="tab-content">
+		  <div id="home" class="tab-pane fade in active">
+		  <br>
+			<br>
+			<div class="form-group">
+			  <label for="t1">新類別:</label>
+			  <input type="text" class="form-control" id="t1" placeholder="例如： 政府公告">
+			</div>
+			<br>
+			<button id="add" type="button" class="btn btn-success" data-dismiss="modal">新增</button>
+		  </div>
+		  
+		  <div id="menu1" class="tab-pane fade">
+		  <h3>修改</h3>
+			<ul class="list-group" id="list_prod">
+				<li class="list-group-item">無資料<span class="badge">0</span></li>
+			</ul>
+		  </div>
+		 
+		</div>
+		
+	</div>
+	<br>
+	<br>
+	<br>
+<!-- Modal -->
+<div class="modal fade" id="Modal_prod" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">類別修改</h4>
+      </div>
+      <div class="modal-body">
+        <br>
+			<div class="form-group">
+			  <label for="t1">標題:</label>
+			  <input type="text" class="form-control" id="t1_m" placeholder="">
+			</div>
+			<br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="chg" class="btn btn-info">修改</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal_m -->
+<div class="modal modal2 fade" id="Modal_prod_m" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">圖庫(<a href="news.html" target="_blank">上傳系統</a>)</h4>
+      </div>
+      <div class="modal-body">
+			<div class="" id='pic_demo'>
+				<h1>無照片，或發生錯誤，請聯絡工程師</h1>
+			</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="sel_pic" class="btn btn-danger" data-dismiss="modal">選擇</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="js/newskind.js"></script>
+</body>
+</html>

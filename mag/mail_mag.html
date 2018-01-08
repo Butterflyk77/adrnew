@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mark</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<style>
+body{
+	font-family: "微軟正黑體";
+}
+</style>
+<body>
+	<div id="htmlnav"></div>
+	<div class="container-fluid">
+		<h1>管理端<small>Mail <a href="mail.html" target="_blank">點我測試</a></small></h1>
+		<div class="row" id="show_prod"></div>
+		
+		<ul class="nav nav-tabs">
+		  <li class="active"><a data-toggle="tab" href="#home">留言列表</a></li>
+		  <li><a data-toggle="tab" id="mail_info" href="#menu1">留言資訊</a></li>
+		  <li><a data-toggle="tab" id="mail_user" href="#menu2">使用者名單</a></li>
+		</ul>
+
+		<div class="tab-content">
+		  <div id="home" class="tab-pane fade in active">
+			<ul class="list-group" id="mail_list">
+			  <li class="list-group-item">劉振維 <span class="badge">2017/04/13 19:55</span></li> 
+			</ul>
+		  </div>
+		  <div id="menu1" class="tab-pane fade">
+		  <h3>客戶資訊<small><span id='t0'></span></small></h3>
+			<h4>客戶名稱：<span id='t1'></span></h4>
+			<h4>Email   ：<span id='t2'></span></h4>
+			<h4>連絡電話：<span id='t3'></span></h4>
+			<h4>訊息：<span id='t4'></span></h4>
+		  </div>
+		  <div id="menu2" class="tab-pane fade">
+			<div class="form-group">
+			  <label for="t1">名稱:</label>
+			  <input type="text" class="form-control" id="u1" placeholder="例如： Mark">
+			</div>
+			<div class="form-group">
+			  <label for="t2">Email:</label>
+			  <input type="text" class="form-control" id="u2" placeholder="例如： Mark@gmail.com">
+			</div>
+			<button id="add" type="button" class="btn btn-success" data-dismiss="modal">新增</button>
+			<br>
+			<br>
+			<h3>使用者列表</h3>
+			<ul class="list-group" id="user_list">
+			  <li class="list-group-item">劉振維:q11295@gmail.com<span class="badge">2017/04/13 19:55</span></li> 
+			</ul>
+		  </div>
+		  
+		</div>
+		
+	</div>
+	<br>
+	<br>
+	<!-- Modal -->
+<div class="modal fade" id="Modal_user" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">類別修改</h4>
+      </div>
+      <div class="modal-body">
+        <br>
+			<div class="form-group">
+			  <label for="t1">名稱:</label>
+			  <input type="text" class="form-control" id="t1_m" placeholder="">
+			</div>
+			<div class="form-group">
+			  <label for="t1">Email:</label>
+			  <input type="text" class="form-control" id="t2_m" placeholder="">
+			</div>
+			<br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="del" class="btn btn-danger">刪除</button>
+        <button type="button" id="chg" class="btn btn-info">修改</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+	<script src="js/mail.js"></script>
+	<script src="js/account.js"></script>
+	<script>
+		$("#htmlnav").load('html-nav.html');
+	</script>
+</body>
+</html>

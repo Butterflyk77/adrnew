@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mark</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+  
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-scroll-spy.js"></script>
+    <script type="text/javascript" src="js/countUp.js"></script>
+    <script type="text/javascript" src="js/angular-countUp.js"></script>
+</head>
+<style>
+body{
+	font-family: "微軟正黑體";
+}
+
+.news_name {
+    padding: 5px 0px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.news_info {
+    padding: 5px 0px;
+    text-align: left;
+    color: #666;
+    font-size: 20px;
+}
+
+.news_date {
+    padding: 5px 0px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-align: right;
+}
+
+blockquote {
+    padding: 1px 10px;
+    margin: 0 0 8px;
+    /* font-size: 45.5px; */
+    border-left: 5px solid #2196F3;
+    background-color: #ddffff;
+}
+</style>
+<body ng-app="demoApp">
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="">MKtool</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="news_mag.html">最新消息管理</a></li>
+        <li class=""><a href="run.html">跑馬燈管理</a></li>
+        <li class=""><a href="pic.html">圖庫系統</a></li>
+		<li class=""><a href="mail_mag.html">留言資訊</a></li>
+		<li><a href="qa_mag.html">Q&A管理</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+	<div class="container-fluid">
+			<blockquote>
+			<h1 id="newstit">最新消息</h1>
+			<footer>點閱率:<span class="kindaBig ng-isolate-scope" count-up="" id="animation1" start-val="0" end-val="9000" duration="3" scroll-spy-event="elementFirstScrolledIntoView" scroll-spy=""></span></footer>
+			</blockquote>
+			<div id="demo">
+				<!--
+				<div align="left" class="news_name"><a href="news.php?id=24">NULL</a></div>
+				-->
+				<div class="news_info">未選擇消息</div>
+				<div class="news_date">發佈日期：2017-04-10 09:53:58&nbsp;<a href="news.php?id=24"></a></div>
+			</div>
+			
+	</div>
+	<br>
+	<br>
+	<br>
+<script>
+ var app = angular.module("demoApp",["scrollSpyModule", "countUpModule"]);
+
+
+	get_json();//取得列表
+	var josn_list_status;
+	var chk, url_str, url_n;
+	url_str = location.search;
+	url_n = url_str.length;
+	chk = url_str.substring(1, url_n); //去掉 ?
+	//alert(chk);
+	chk = chk.split("=");
+	//alert(chk[0]);//id
+	//alert(chk[1]);//1
+	var json_list = '';
+	var con_lit = '';
+	function get_json(){
+		$.ajax({
+			type: 'POST',
+			url: "server/news.php",
+			dataType: "json",
+			data:{
+				mod_tab:'show_list'
+			},
+			success: function(status){
+				console.log(JSON.stringify(status));
+				var demo="";
+				for(i=0;i<=status.length-1;i++){
+				if (status[i].news_id !== chk[1]) {
+					continue;
+				}
+				//demo +='<div align="left" class="news_name"><a href="news_demo.html?id='+status[i].news_id+'">'+status[i].news_title+'</a></div> ';
+				demo +='<hr>                                                                                  ';
+				demo +='<div class="news_info">'+status[i].news_content+'</div>                                                                                  ';
+				demo +='<div class="news_date">發佈日期：'+status[i].news_time+'&nbsp;<a href="news.php?id=24"></a></div>                  ';
+				$("#animation1").attr('end-val',status[i].news_click);
+				$("#demo").html(demo);
+				$("#newstit").text(status[i].news_title);
+				}
+				
+			}
+		});
+	}
+	clickurl();
+	function clickurl(){
+		$.ajax({
+			type: 'POST',
+			url: "server/news.php",
+			data:{
+				mod_tab:'clickurl',
+				id_news:chk[1]
+			},
+			success: function(status){
+				console.log(JSON.stringify(status));
+			}
+		});
+	}
+</script>
+</body>
+</html>
